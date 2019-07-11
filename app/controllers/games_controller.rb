@@ -10,6 +10,12 @@ class GamesController < ApplicationController
     render json: game, include: [:user]
   end
 
+  # def destroy
+  #   game = Game.find(params[:id])
+  #   game.delete
+  #   render json: game, include: [:user]
+  # end
+
   private
   def game_params
     params.require(:game).permit(:user_id, :click_total)
