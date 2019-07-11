@@ -15,6 +15,12 @@ class UsersController < ApplicationController
     render json: user, include: [:games]
   end
 
+  def destroy
+    user = User.find(params[:id])
+    user.delete
+    render json: user
+  end
+
   def user_params
     params.require(:user).permit(:username)
   end

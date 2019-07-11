@@ -37,6 +37,6 @@ module GPMatchGame
         resource '*', headers: :any, methods: [:get, :post]
       end
     end
-    
+
   end
 end
